@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# output file
+filename=`dirname $0`/PIPE_RANDOM
+
+# print 4 random integers 0 and 32,767 pip to output file
+printf "%s\n" "$RANDOM" "$RANDOM" "$RANDOM" "$RANDOM" | tee $filename
+
+# output saved file
+cat $filename

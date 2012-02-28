@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# read defining 4 vars
+read a b c d
+
+# input the following
+# one two three four five six seven eight nine ten
+
+echo a: $a # one
+echo b: $b # two
+echo c: $c # three
+echo d: $d # four five six seven eight nine ten

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# EXAMPLES
+#
+# Basic:
+#
+#     $ ./expand-arguments one two three four
+#     arg: one
+#     arg: two
+#     arg: three
+#     arg: four
+#
+# Quoted:
+#
+#     $ ./expand-arguments one "two three" four
+#     arg: one
+#     arg: two three
+#     arg: four
+#
+# Escaped (same as quoted):
+#
+#     $ ./expand-arguments one two\ three four
+
+
+# expands arguments passed to script $@
+printf "arg: %s\n" "$@"

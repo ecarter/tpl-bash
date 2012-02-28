@@ -1,0 +1,4 @@
+#!/bin/bash
+
+printf -v num "%04d" 4
+printf "%s\n" "$num"

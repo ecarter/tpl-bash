@@ -1,0 +1,15 @@
+#!/bin/bash
+
+OPTIONS="hello quit"
+
+select opt in $OPTIONS; do
+  if [ "$opt" = "quit" ]; then
+    echo done
+    exit
+  elif [ "$opt" = "hello" ]; then
+    echo "world, hello."
+  else
+    clear
+    echo that option is no good :/
+  fi
+done

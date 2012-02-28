@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+# parentheses () optional
+
+quit ()
+{
+  echo bye
+  exit         # return
+}
+
+hello ()
+{
+  echo hello
+}
+
+# call the functions by typing them
+
+hello
+quit
+
+echo "you shouldn't see this o_O"

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "enter some text"
+read TEXT
+echo "[input] $TEXT"
+
+echo "enter two words"
+read WORD1 WORD2
+echo "[word 1] $WORD1"
+echo "[word 2] $WORD2"

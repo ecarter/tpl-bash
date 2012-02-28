@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Usage: $0 <string1> <string2>
+
+case $1 in
+  *"$2"*) printf "%s is in %s" $2 $1 ;;
+  *) printf "%s is not in %s" $2 $1 ;;
+esac

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Asterisk wildcard matches
+
+# should list all directories containing the letter 'e'
+echo directories that start with e
+printf "* %s\n" ./examples/e*
+
+echo directories that end with s
+# should list all directories ending in 's'
+printf "* %s\n" ./examples/*s
+
+echo directories where e is the second letter
+printf "* %s\n" ./examples/?e*

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+s1=asdf
+s2=hjkl
+t=$( test "$s1" \< "$s2" )
+
+# not working, too many args?
+test -f "$0" -o $t -eq 1

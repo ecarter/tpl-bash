@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# ~ (tilde) expands to $HOME directory
+ls ~
+
+# ~name expands to $HOME directory of user name
+# should get permission denied unless root (sudo)
+ls ~root
+
+# this doesn't get expanded (not valid user name)
+ls ~somerandomdir

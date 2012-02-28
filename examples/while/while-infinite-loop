@@ -1,0 +1,12 @@
+#!/bin/bash
+
+printf "infinite read loop. type 'exit' to stop"
+
+while true
+do
+  read x
+  if [ "$x" = "exit" ]
+  then
+    exit 0
+  fi
+done

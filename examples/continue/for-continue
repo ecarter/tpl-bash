@@ -1,0 +1,11 @@
+#!/bin/bash
+
+greater=10
+max=20
+
+for i in $( eval echo {0..$max} ) # brace expand
+do
+  # only print numbers less than $max
+  [ $i -gt $greater ] && continue
+  echo $i is less than $greater
+done

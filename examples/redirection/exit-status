@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# run a command that returns a error code
+printf "%v\n"
+
+# exit code for last command $?
+echo "\$? =" $?

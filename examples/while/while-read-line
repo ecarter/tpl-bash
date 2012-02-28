@@ -1,0 +1,24 @@
+#!/bin/bash
+
+i=1
+filename=$( dirname $0 )/read-line-content.txt
+
+# Add lines
+while [ $i -lt 15 ]
+do
+  echo i: $i
+  echo "this is line $i" >> $filename
+  i=$(( $i + 1 ))
+done
+
+i=1
+
+# Read lines
+while IFS= read -r line
+do
+  printf "%10.10s %20.20s\n" $i "$line"
+  i=$(( $i + 1 ))
+done < $filename
+
+# empty the file
+echo '' > $filename

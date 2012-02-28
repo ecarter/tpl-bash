@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# default IFS
+# IFS=$' \t\n'
+
+# variable with multiple IFS
+var='  one
+  two  
+  three  
+  four  
+  five'
+
+printf "%s\n" $var
+
+# override IFS
+IFS='t'
+
+# splits arguments at 't' character
+# whitespace is perserved
+printf "%s\n" $var

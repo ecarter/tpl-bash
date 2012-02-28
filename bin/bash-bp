@@ -1,0 +1,70 @@
+#!/bin/bash
+
+# bash-bp - BASH Boilerplate
+# 
+# (C) 2012 Erin Carter <hi@dnvsfn.com> (http://github.com/ecarter)
+# 
+# Licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+# http://creativecommons.org/licenses/by-sa/3.0/
+
+# Setup variables
+program=${0##*/}
+filename=
+help=0
+optstring=f:h
+
+# Help menu
+usage () {
+	cat <<- EOF
+	
+  Usage: $program -f <filename>
+  
+    -f <filename>   Creates new bash tool
+    -h              Show help usage
+  
+	EOF
+  exit 0
+}
+
+# Creates new bash executable
+create () {
+  printf "Creating file: %s" $1
+  printf "#!%s\n\n# code goes here\n" $BASH >> $1
+  chmod +x $1
+  exit 0
+}
+
+# Parse option arguments
+while getopts $optstring opt
+do
+  case $opt in
+    f) filename=$OPTARG ;;
+    h) help=$(( $help + 1 )) ;;
+    *) exit 1 ;;
+  esac
+done
+
+# Remove unparsed arguments
+shift "$(( $OPTIND - 1 ))"
+
+if [ -n "$filename" ]     # make sure filename is not null
+then
+  # check destination already exists
+  if [ -f "$filename" ]  
+  then
+    # throw error
+    printf "File exists: %s\n" "$filename"
+    printf "Please specifiy different file name\n"
+    exit 1
+  # create if possible
+  else
+    create "$filename"
+  fi
+# show usage if no args are passed, for now
+else
+  printf "Requires -f <filename>\n"
+  usage
+fi
+
+# -h Show usage
+[ $help -gt 0 ] && usage

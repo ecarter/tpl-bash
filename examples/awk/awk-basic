@@ -1,0 +1,10 @@
+#!/bin/bash
+
+dir=$( dirname $0 )
+filename=$dir/dummy.txt
+
+printf "\nprints each line of %s containing 'ev'\n" $filename
+awk '/ev/ {print}' $filename
+
+printf "\nprints the number of lines in %s containing 'e'\n" $filename
+awk '/e/ {i=i+1} END {print i}' $filename

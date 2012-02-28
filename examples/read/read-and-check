@@ -1,0 +1,12 @@
+#!/bin/bash
+
+read val
+
+if [ -z "$val" ]
+then
+  echo "you must enter a value" >&2
+  exit 1
+else
+  echo "you entered $val"
+  exit 0
+fi

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# divider
+div=====================
+div=$div$div$div$div
+
+# format
+header="\n %-10s %10s %10s %15s\n"
+format=" %-10s %10.2f %10s %15.2f\n"
+
+# divider width
+totalwidth=50
+
+# print header
+printf "$header" COL1 COL2 COL3 COL4
+
+# print divider
+printf "%$totalwidth.${totalwidth}s\n" "$div"
+
+# print report
+printf "$format" \
+  One 55.25 5 345.8 \
+  Two 23.42 9 234.33 \
+  Three 34.97 4 594.30
+

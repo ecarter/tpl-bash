@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo $'escape\n\'single quotes\'\nto create a string variable'
+
+echo $"double quotes\n don't get\nexpanded o_O"

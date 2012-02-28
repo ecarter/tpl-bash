@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# if you don't have `seq` on your system google it
+
+for i in $( seq 0 10 )
+do
+  echo item: $i
+done

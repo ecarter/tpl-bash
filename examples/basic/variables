@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Camel
+someVarName=
+
+# First letter caps
+SomeOtherVarName=
+
+# Underscores
+some_var=
+
+# ALL CAPS
+VAR=

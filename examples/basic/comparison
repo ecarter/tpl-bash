@@ -1,0 +1,15 @@
+#!/bin/bash
+
+str1='abcd'
+str2='efgh'
+
+if [ $str1=$str2 ]
+then
+  echo "\$str1 is not equal to \$str2"
+fi
+
+if [ $str1=$str1 ]
+then
+  echo "\$str1 is equal to \$str1"
+fi
+

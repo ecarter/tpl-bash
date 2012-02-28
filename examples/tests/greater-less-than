@@ -1,0 +1,13 @@
+#!/bin/bash
+
+s1=asdf
+s2=hjkl
+
+# test greater than, escape \< so not mistaken for < redirection
+test "$s1" \< "$s2"
+
+# show result
+echo "test \"$s1\" \\< \"$s2\" =" $?
+
+test "$s1" \> "$s2"
+echo "test \"$s1\" \\> \"$s2\" =" $?

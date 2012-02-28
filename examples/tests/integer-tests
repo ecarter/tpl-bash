@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# test equality
+test 1 -eq 1
+# result 0
+echo $?
+
+# same as
+[ 1 -eq 1 ]
+echo $?
+
+# again
+test 2 -eq 1
+# result 1
+echo $?
+
+# test not equal
+[ 2 -ne 1 ]
+echo $?

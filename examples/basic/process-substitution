@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# list the difference in two directories using `diff` and process substitution
+# diff <(ls ./examples) <(ls ./bin)
+
+# Example: piped
+echo "using ls |"
+ls |
+while read name
+do
+  echo file: $name
+done
+
+# same (with process sub)
+echo "using <(ls)"
+while read name
+do
+  echo file: $name
+done < <(ls)

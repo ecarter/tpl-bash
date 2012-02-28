@@ -1,0 +1,14 @@
+#!/bin/bash
+
+test 4 -lt 5 && echo 4 is less than 5
+test 5 -gt 4 && echo 5 is greater than 4
+test 1 -lt 3 && echo 1 is not less than or equal to 3
+test 2 -ge 2 && echo 2 is greater than or equal to 2
+test 0 -eq 0 && echo 0 is equal to 0
+test -1 -ne 0 && echo -1 is not equal to 0
+
+n1=6
+n2=5
+if `test $n1 -lt $n2`; then echo true; else echo false; fi
+if [ $n1 \< $n2 ]; then echo true; else echo false; fi
+if [ $n1 -lt $n2 ]; then echo true; else echo false; fi 

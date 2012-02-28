@@ -1,0 +1,20 @@
+#!/bin/bash
+
+find=e
+
+printf "find the letter %s\n" $find
+
+for letter in a b c d e f g
+do
+  while true
+  do
+    if [ "$letter" = "$find" ]
+    then
+      printf "found %s\n" $letter
+      break 2 # breaks parent for loop
+    else
+      printf "%s\n" $letter
+      break
+    fi
+  done
+done

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+INPUT=`dirname $0`/READ_INPUT
+
+echo "reading from file"
+read input < $INPUT
+
+echo input: $input
+
+echo "reading with vars"
+read a b c d < $INPUT
+echo a: $a
+echo b: $b
+echo c: $c
+echo d: $d

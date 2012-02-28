@@ -1,0 +1,9 @@
+#!/bin/bash
+
+words="one two three four five six"
+
+# prints each word as argument (expanded)
+printf "%s\n" $words
+
+# print words as single argument
+printf "%s\n" "$words"

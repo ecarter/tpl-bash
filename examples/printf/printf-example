@@ -1,0 +1,12 @@
+#!/bin/bash
+
+printf "\ndigits\n"
+printf "%d\n" 23 45 56.78 0xff 011
+
+printf "\nfloats\n"
+printf "%f\n" 12.34 23 56.789 1.2345678
+
+printf "\nscientific\n"
+printf "%e\n" 12.34 23 56.789 123.45678
+
+printf "\ncolor: #%02x%02x%02x;\n" 65 105 225

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Usage: file-tests [filename]
+
+# if [filename] is passed use that, else default to this file as example
+if [ -n "$1" ] ; then file="$1"; else file="$0"; fi
+
+printf "Testing: %s\n" "$file"
+test -f $file && echo regular file || echo not regular file
+test -h $file && echo symbolic link || echo not symbolic link
+test -x $file && echo executable || echo not executable

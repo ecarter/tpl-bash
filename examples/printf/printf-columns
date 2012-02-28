@@ -1,0 +1,11 @@
+#!/bin/bash
+
+items="first second third fourth fifth sixth"
+
+printf "%10s %-15s:\n\n" $items
+echo "-----------"
+printf "%10s %15s:\n\n" $items
+echo "-----------"
+printf "%10s : %10s\n\n" $items
+echo "-----------"
+printf "%12.4s %10.2f\n" One 1.2345 Two 2.3456 Three 3.4567 Four 4.5678

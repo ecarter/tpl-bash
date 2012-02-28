@@ -1,0 +1,12 @@
+#!/bin/bash
+
+printf "\nClassic Backticks \`command\`\n"
+
+date=`date`
+printf "date=\`date\`= %s\n" "$date"
+
+
+printf "\nRecommended \$( command )\n"
+
+date=$( date )
+printf "date=\$( date )=%s\n" "$date"

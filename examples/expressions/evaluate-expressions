@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# strings
+
+str=SomeRandomString
+
+# check for 'o' followed by 'm'
+[[ $str =~ o[m] ]]
+echo $?
+
+# check for 'a' followed by 'd'
+[[ $str =~ a[d] ]]
+echo $?
+
+
+# arithmetic
+
+n=10
+# if n - 10 is not equal to 0 then $? should be 1
+test $(( $n - 10 )) -ne 0
+echo $?
+
+

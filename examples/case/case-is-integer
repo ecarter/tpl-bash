@@ -1,0 +1,6 @@
+#!/bin/bash
+
+case $1 in
+  *[!0-9]*) printf "%d is not integer" $1 ;;
+  *) printf "%d is integer" $1 ;;
+esac

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "continues loop each time value is entered"
+echo "hit [enter] to exit"
+
+while :
+do
+  read input
+  [ -z "$input" ] && break
+done

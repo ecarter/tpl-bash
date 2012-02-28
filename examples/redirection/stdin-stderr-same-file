@@ -1,0 +1,20 @@
+#!/bin/bash 
+
+dir=`dirname $0`
+format="%s\n%v\n"
+
+# out & err to FILESAME
+# 2>&1 classic portable, works pre bash v4
+# http://stackoverflow.com/q/876239/902602
+printf '$format' OK? Oops! > $dir/FILESAME 2>&1
+
+# reversing the order causes error to go to terminal
+printf '$format' OK? Oops! 2>&1 > $dir/FILE_REVORDER
+
+# does same
+printf '$format' OK? Oops! &> $dir/FILESAME2
+
+# append out & err to FILESAME_APPEND
+# &>> non-portable, only works bash >v4
+# printf '$format' OK? Oops! &>> $dir/FILESAME_APPEND
+

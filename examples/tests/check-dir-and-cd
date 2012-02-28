@@ -1,0 +1,23 @@
+#!/bin/bash
+
+dir=$( dirname $0 )
+
+echo dir: $dir
+
+# test -d "$dir" && cd "$dir"
+# exits 1
+
+# will exit 1 unless you have a ~/bin directory
+cd "$HOME/bin" || exit 1
+
+# make temp dir, change into it, exit 1 if not
+mkdir -p "$dir/temp" && cd "$dir/temp" || exit 1
+
+# check if directory exists
+# and cd into it
+if [ -d "$HOME/bin" ] && cd "$HOME/bin"
+then
+  echo $( pwd )
+else
+  echo "\$? =" $?
+fi

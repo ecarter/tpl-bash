@@ -1,0 +1,20 @@
+#!/bin/bash
+
+min=0
+max=10
+
+printf "enter number %d - %d\n" $min $max
+
+read num
+
+if [ "$num" -gt $max ]
+then
+  printf "%d > %d: out of range" $num $max
+  exit 1
+elif [ "$num" -lt $min ]
+then
+  printf "%d < %d: out of range" $num $min
+  exit 1
+else
+  printf "%d is between %d - %d" $num $min $max
+fi

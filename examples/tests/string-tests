@@ -1,0 +1,27 @@
+#!/bin/bash
+
+a='str'
+b='STR'
+
+# test equality
+test "$a" = "$b"
+echo "test \"$a\" = \"$b\" = " $?
+
+# same as
+[ "$a" = "$b" ]
+echo "[ \"$a\" = \"$b\" ] =" $?
+
+# test inequality
+test "$a" != "$b"
+echo "test \"$a\" != \"$b\" =" $?
+# same as
+[ "$a" != "$b" ]
+echo "[ \"$a\" != \"$b\" ] =" $?
+
+# test for empty string
+[ -z "" ]
+echo "[ -z \"\" ] =" $?
+
+# test for non-empty string
+[ -n "" ]
+echo "[ -n \"\" ] =" $?

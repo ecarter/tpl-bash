@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for word in one two three four five six
+do
+  echo word: $word
+done

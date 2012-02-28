@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DIR=$( dirname $0 )
+TEST_TEXT=$DIR/test.txt
+REPLACED_TEXT=$DIR/replaced.txt
+BLOCK_TEXT=$DIR/block.txt
+
+# replaces text and save output to replaced.txt
+sed 's/replace_this_text/this text was replaced/g' $TEST_TEXT > $REPLACED_TEXT
+printf "\n# %s contents:\n%s\n\n" $REPLACED_TEXT "$( cat $REPLACED_TEXT )"
+
+# removes lines 1-3 and saves output to block.txt
+sed 1,3d $TEST_TEXT > $BLOCK_TEXT
+printf "\n# %s contents:\n%s\n\n" $BLOCK_TEXT "$( cat $BLOCK_TEXT )"

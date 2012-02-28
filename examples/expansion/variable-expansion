@@ -1,0 +1,16 @@
+#!/bin/bash
+
+var=sometext
+
+# expand variable
+echo "$var"
+
+# (mostly) optional braces
+echo "${var}"
+
+# you need braces when variable is follow by valid variable character
+text1="first"
+text2="second"
+
+echo "$text1_$text2"
+echo "${text1}_$text2"

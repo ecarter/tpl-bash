@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Expand {a,b,c,d,e}"
+printf "%s\n" {a,b,c,d,e}
+
+# bash > 3.0
+echo "Expand {1..10}"
+printf "%d\n" {1..10}
+
+# same as first example
+echo "Expand {a..e}"
+printf "%s\n" {a..e}
+
+# prefix & suffix are passed to each expanded argument
+echo "Expand {some,all,none}"
+printf "I like programming %s of the time.\n" {some,all,none}
+
+# nested braces
+echo "# Expand {{a..e},{A..E}}"
+printf "%s\n" {{a..e},{A..E}}
+
+# combined braces
+echo "# Expand {A..E}{1..5}"
+printf "%s\n" {A..E}{1..5}
