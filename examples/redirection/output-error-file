@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dir=$( dirname $0 )
+output_file=$dir/output.txt
+error_file=$dir/errors.txt
+
+printf "Write stdout to %s and stderr to %s\n" $output_file $error_file
+printf "%s\n%v\n" Success Error! > $output_file 2> $error_file

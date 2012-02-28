@@ -1,0 +1,22 @@
+#!/bin/bash 
+
+dir=$( dirname $0 )
+format="%s\n%v\n"
+output_file=$dir/output.txt
+output_error_file=$dir/output-combined.txt
+
+printf "Write stdout and stderr to %s\nUsing command > filename > 2>&1\n\n" $output_error_file
+# 2>&1 classic portable, works pre bash v4
+# http://stackoverflow.com/q/876239/902602
+printf '$format' Success Error! > $output_error_file 2>&1
+
+printf "Reversing the order causes error to go to terminal\nUsing command 2>&1 > filename\n\n"
+printf '$format' Success Error! 2>&1 > $output_file
+
+printf "&> does the same as previous example\n\n"
+printf '$format' Success Error! &> $output_file
+
+# append out & err to output.txt
+# &>> non-portable, only works bash >v4
+# printf '$format' Success Error! &>> $output_file
+

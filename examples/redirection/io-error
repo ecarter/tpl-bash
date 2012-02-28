@@ -1,5 +1,0 @@
-#!/bin/bash
-
-for i in `ls ~/`; do
-  ls -l ~/$i > FILE 2> ERROR_FILE
-done

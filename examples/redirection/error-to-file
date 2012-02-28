@@ -1,0 +1,11 @@
+#!/bin/bash
+
+dir=$( dirname $0 )
+output_file=$dir/output.txt
+error_file=$dir/errors.txt
+
+# Writes only errors to file
+# this assumes you have non-directories in your $HOME
+for i in `ls $HOME`; do
+  ls -l $HOME/$i > $output_file 2> $error_file
+done

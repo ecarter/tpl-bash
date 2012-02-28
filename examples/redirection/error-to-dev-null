@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# send errors to bit bucket /dev/null
+# send errors to /dev/null
 printf '%s\n%v\n' Ok? Oops! 2>/dev/null

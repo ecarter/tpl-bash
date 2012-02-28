@@ -1,0 +1,1 @@
+./examples/redirection/output-error-file: line 9: printf: `v': invalid format character

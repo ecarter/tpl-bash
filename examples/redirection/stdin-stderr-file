@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# this file's parent directory
-dir=`dirname $0`
-
-# writes stdout to FILE and stderr to ERRORFILE
-printf "%s\n%v\n" Ok? Oops! > $dir/FILE 2> $dir/ERRORFILE
