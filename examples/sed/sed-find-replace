@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Lists files directories in a parent directory
+# a creates a Markdown formatted link
+# used in README.md
+
+sed 's/^\(.*\)$/\* \[\1\]\(\.\/examples\/\1\)/g' < <(ls examples)
