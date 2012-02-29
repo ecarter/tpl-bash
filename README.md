@@ -1,7 +1,7 @@
 # through the process of learning - bash
 
 Collection of scripts and resources gathered through the process of 
-learning [bash](http://en.wikipedia.org/wiki/bash_\(unix_shell\)).
+learning [bash](http://en.wikipedia.org/wiki/bash_\(Unix_shell\)).
 
 **This work is by no means complete and is written from a bash beginner's
 perspective**. It assumes the viewer is familiar with programming and is 
@@ -13,27 +13,27 @@ comfortable in a terminal window but has little to no bash experience.
 Examples are organized by tool or concept. Scripts are written and known
 to work using GNU bash version 3.2.48 _(default OSX 10.6 installation)_. 
 
-**Topics** _(order alphabetically)_
+**Topics** _(ordered alphabetically)_
 
-* [awk](./examples/awk)
-* [basic](./examples/basic)
-* [break](./examples/break)
-* [case](./examples/case)
-* [continue](./examples/continue)
-* [expansion](./examples/expansion)
-* [expressions](./examples/expressions)
-* [for](./examples/for)
-* [pipes](./examples/pipes)
-* [printf](./examples/printf)
-* [read](./examples/read)
-* [redirection](./examples/redirection)
-* [sed](./examples/sed)
-* [strings](./examples/strings)
-* [tests](./examples/tests)
-* [until](./examples/until)
-* [while](./examples/while)
+* [awk](./tree/master/examples/awk)
+* [basic](./tree/master/examples/basic)
+* [break](./tree/master/examples/break)
+* [case](./tree/master/examples/case)
+* [continue](./tree/master/examples/continue)
+* [expansion](./tree/master/examples/expansion)
+* [expressions](./tree/master/examples/expressions)
+* [for](./tree/master/examples/for)
+* [pipes](./tree/master/examples/pipes)
+* [printf](./tree/master/examples/printf)
+* [read](./tree/master/examples/read)
+* [redirection](./tree/master/examples/redirection)
+* [sed](./tree/master/examples/sed)
+* [strings](./tree/master/examples/strings)
+* [tests](./tree/master/examples/tests)
+* [until](./tree/master/examples/until)
+* [while](./tree/master/examples/while)
 
-[See all examples](./examples/)
+[See all examples](./tree/master/examples/)
 
 Best method of using the examples is to open the file to
 view the source comments followed by running the file in terminal to see the results.
@@ -41,12 +41,12 @@ Some examples are explained in comments and others in the output so check both.
 
 # Resources
 
-[Links, Books, & everthing else](./RESOURCES.md)
+[Links, Books, & everthing else](./tree/master/RESOURCES.md)
 
 
 # Tools
 
-### [bash-bp](./bin/bash-bp) - BASH Executable Boilerplate
+### [bash-bp](./tree/master/bin/bash-bp) - BASH Executable Boilerplate
 
 A helper for creating a new (executable) bash file.
 
