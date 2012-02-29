@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Default Values
+
+parameter=
+printf "\n:- (colon dash) check if value is unset, expand 'default' if so\n"
+printf "\${parameter:-default} = %s\n" "${parameter:-default}"
+
+printf "\n\n- (dash) check if value is unset, don't expand if so\n"
+printf "\${parameter-default} = %s\n" "${parameter-default}"
+
+unset parameter
+printf "\n\nunset parameter, check if value is unset, expands to 'default'\n"
+printf "\${parameter-default} = %s\n" "${parameter-default}"
+
+
+# Alternate Values
+
+parameter=
+printf "\n\n:+ (colon plus) set alternate value only if NOT empty (already set)\n"
+printf "\${parameter:+alternate} = %s\n" "${parameter:+alternate}"
+
+parameter=value
+printf "\n\nset parameter=value and alternate value will be used\n"
+printf "\${parameter:+alternate} = %s\n" "${parameter:+alternate}"
+
+unset parameter # unset for following example
+
+parameter=
+printf "\n\n+ (plus, no colon) set alternate value if already set\n"
+printf "\${parameter+alternate} = %s\n" "${parameter+alternate}"
+
+unset parameter
+printf "\n\nif value is not set, alternate will NOT be used\n"
+printf "\${parameter+alternate} = %s\n" "${parameter+alternate}"
