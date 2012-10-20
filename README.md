@@ -8,7 +8,7 @@ perspective**. It assumes the viewer is familiar with programming and is
 comfortable in a terminal window but has little to no bash experience.
 
 
-# Examples
+## Examples
 
 Examples are organized by tool or concept. Scripts are written and known
 to work using GNU bash version 3.2.48 _(default OSX 10.6 installation)_. 
@@ -39,12 +39,12 @@ Best method of using the examples is to open the file to
 view the source comments followed by running the file in terminal to see the results.
 Some examples are explained in comments and others in the output so check both.
 
-# Resources
+## Resources
 
 [Links, Books, & everthing else](tpl-bash/tree/master/RESOURCES.md)
 
 
-# Tools
+## Tools
 
 ### [bash-bp](tpl-bash/tree/master/bin/bash-bp) - BASH Executable Boilerplate
 
