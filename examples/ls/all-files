@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# displays all files in directory excluding current directory . and parent ..
+
+ls -1a | egrep -v '^(\.|\.\.)$'

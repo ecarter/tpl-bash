@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# prints a directory tree of files
+
+ls -R | grep \":$\" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
